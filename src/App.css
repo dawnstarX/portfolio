@@ -92,7 +92,7 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background: linear-gradient(90.21deg, rgba(74, 47, 189,1) -5.91% ,rgba(170, 54, 124,0.5) 111.58%);
 }
 nav.navbar a.navbar-brand {
     width: 9%;
@@ -141,11 +141,6 @@ span.navbar-text {
 }
 .social-icon a:hover::before {
     transform: scale(1);
-}
-.gitImage{
-    width: 70%;
-	z-index: 1;
-	transition: 0.3s ease-in-out;
 }
 .social-icon a img {
 	width: 40%;
@@ -240,7 +235,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url('./assets/img/banner-bg.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -264,7 +259,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
-  color: #B8B8B8;
+  color: #000000;
+  font-weight: bold;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -310,6 +306,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  
 }
 .skill-bx {
   background: #151515;
@@ -317,6 +314,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
+  background: linear-gradient(90.21deg, rgba(74, 47, 189) -5.91% ,rgba(170, 54, 124) 111.58%);
 }
 .skill h2 {
 	font-size: 45px;

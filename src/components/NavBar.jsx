@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../assets/img/logo.svg";
+import logo from "../assets/img/mylogo.jpg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
@@ -14,15 +14,15 @@ const NavBar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrolly > 50) {
+      if (window.scrollY > 150) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
-
-      window.addEventListener("scroll", onScroll);
-      return () => window.removeEventListener("scroll", onScroll);
     };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const onUpdateActiveLink = (value) => {
@@ -34,7 +34,7 @@ const NavBar = () => {
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="#home">
-            <img src={logo} alt="logo" />
+            <img style={{ "border-radius": "50%" }} src={logo} alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@ const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("home")}
               >
-                skills
+                Skills
               </Nav.Link>
               <Nav.Link
                 href="#projects"
@@ -68,7 +68,7 @@ const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("projects")}
               >
-                projects
+                Projects
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
