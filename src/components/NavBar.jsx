@@ -34,7 +34,7 @@ const NavBar = () => {
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="#home">
-            <img style={{ "border-radius": "50%" }} src={logo} alt="logo" />
+            <img style={{ borderRadius: "50%" }} src={logo} alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@ const NavBar = () => {
                 Skills
               </Nav.Link>
               <Nav.Link
-                href="#projects"
+                href="#project"
                 className={
                   activeLink === "projects"
                     ? "active navbar-link"
