@@ -5,6 +5,8 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import colourSharp2 from "../assets/img/color-sharp2.png";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 const Project = () => {
   const projects = [
@@ -45,7 +47,17 @@ const Project = () => {
       <Container>
         <Row>
           <Col>
-            <h2>Projects</h2>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__swing" : ""
+                  }
+                >
+                  <h2>Projects</h2>
+                </div>
+              )}
+            </TrackVisibility>
             <p>Projects developed by me are below</p>
             <Row>
               {projects.map((project, index) => {

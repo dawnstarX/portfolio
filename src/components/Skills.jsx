@@ -7,6 +7,8 @@ import skill1 from "../assets/img/skill1.png";
 import skill2 from "../assets/img/skill2.png";
 import skill3 from "../assets/img/skill3.png";
 import skill4 from "../assets/img/skill4.png";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 const Skills = () => {
   const responsive = {
@@ -32,10 +34,23 @@ const Skills = () => {
   return (
     <section className="skill" id="skills">
       <Container>
+        <br />
+        <br />
+        <br />
         <Row>
           <Col>
             <div className="skill-bx">
-              <h2>Skills</h2>
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__fadeIn" : ""
+                    }
+                  >
+                    <h2>Skills</h2>
+                  </div>
+                )}
+              </TrackVisibility>
               <p>below are the skils that i have</p>
               <Carousel
                 responsive={responsive}

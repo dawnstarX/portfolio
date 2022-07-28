@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.png";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -50,20 +52,30 @@ const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my Portfolio</span>
-            <h1>
-              {"Hi I am Abhinav"}
-              <br></br>
-              <span className="wrap">{text}</span>
-            </h1>
-            <p>
-              I'm a software engineer who constantly seeks out innovative
-              solutions to everyday problems and a pasionate programmer who
-              likes to code stuff and watch them get to life.
-            </p>
-            <button onClick={() => console.log("connect")}>
-              Let's Connect <ArrowRightCircle size={25} />
-            </button>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__bounce" : ""
+                  }
+                >
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>
+                    {"Hi I am Abhinav"}
+                    <br></br>
+                    <span className="wrap">{text}</span>
+                  </h1>
+                  <p>
+                    I'm a software engineer who constantly seeks out innovative
+                    solutions to everyday problems and a pasionate programmer
+                    who likes to code stuff and watch them get to life.
+                  </p>
+                  <button onClick={() => console.log("connect")}>
+                    Let's Connect <ArrowRightCircle size={25} />
+                  </button>
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img style={{ width: "auto" }} src={headerImg} alt="Header Img" />
