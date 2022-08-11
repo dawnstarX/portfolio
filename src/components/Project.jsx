@@ -1,9 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/project1.png";
+import projImg2 from "../assets/img/project2.png";
+import projImg3 from "../assets/img/project3.png";
+import projImg4 from "../assets/img/project4.png";
+import projImg5 from "../assets/img/project5.png";
+import projImg6 from "../assets/img/project6.png";
+
 import colourSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -11,34 +15,48 @@ import TrackVisibility from "react-on-screen";
 const Project = () => {
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Food-wayz",
+      description:
+        "A full reciepe website made with the help of spoonacular's API",
       imgUrl: projImg1,
+      projectLink: "https://dawnstarx.github.io/food-wayz/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Travel Mate",
+      description:
+        "Landing Pages for different sections of a Traveling website",
       imgUrl: projImg2,
+      projectLink:
+        "https://62f53f4b69249b00095a21b1--rainbow-kashata-90e055.netlify.app/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "JIIT Taste",
+      description:
+        "Food odering website with ability to add or delete items from store",
       imgUrl: projImg3,
+      projectLink: "https://jiit-taste.herokuapp.com/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Accordion",
+      description: "The QNA section of a webpage",
+      imgUrl: projImg4,
+      projectLink:
+        "https://62eff09639e46339bbd58c13--teal-nasturtium-4a07ac.netlify.app/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Menu",
+      description: "Menu page for a food odering or a fast food chain website",
+      imgUrl: projImg5,
+      projectLink:
+        "https://62eff121657d693bd657abad--gorgeous-pika-7194fe.netlify.app/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Paragraph Generator",
+      description:
+        "Randomly generate paragraphs as a replacement for boring lorem ipsum",
+      imgUrl: projImg6,
+      projectLink:
+        "https://62efefdf4d1e7c3a92c70025--bejewelled-zuccutto-aa0129.netlify.app/",
     },
   ];
 

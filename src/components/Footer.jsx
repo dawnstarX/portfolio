@@ -15,13 +15,13 @@ const Footer = () => {
           </Col>
           <Col md={6} sm={3} className=" text-end align-self-center">
             <div className="social-icon">
-              <a href="#">
+              <a href="https://github.com/dawnstarX">
                 <img src={navIcon1} alt="github" />
               </a>
-              <a href="#">
-                <img src={navIcon2} alt="facebook" />
+              <a href="https://auth.geeksforgeeks.org/user/dawnstar_x/profile">
+                <img src={navIcon2} alt="geekForgeeks" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/dawnstar1507/">
                 <img src={navIcon3} alt="instagram" />
               </a>
             </div>

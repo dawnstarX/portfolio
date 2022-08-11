@@ -77,19 +77,21 @@ const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#">
-                  <img src={navIcon1} alt="" />
+                <a href="https://github.com/dawnstarX">
+                  <img src={navIcon1} alt="github" />
                 </a>
-                <a href="#">
-                  <img src={navIcon2} alt="" />
+                <a href="https://auth.geeksforgeeks.org/user/dawnstar_x/profile">
+                  <img src={navIcon2} alt="geekForgeeks" />
                 </a>
-                <a href="#">
-                  <img src={navIcon3} alt="" />
+                <a href="https://www.instagram.com/dawnstar1507/">
+                  <img src={navIcon3} alt="instagram" />
                 </a>
               </div>
-              <button className="vvd" onClick={(e) => console.log("connect")}>
-                <span>Let's Connect</span>
-              </button>
+              <a href="#connect">
+                <button className="vvd">
+                  <span>Let's Connect</span>
+                </button>
+              </a>
             </span>
           </Navbar.Collapse>
         </Container>

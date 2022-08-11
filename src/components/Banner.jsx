@@ -70,9 +70,11 @@ const Banner = () => {
                     solutions to everyday problems and a pasionate programmer
                     who likes to code stuff and watch them get to life.
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let's Connect <ArrowRightCircle size={25} />
-                  </button>
+                  <a href="#connect">
+                    <button>
+                      Let's Connect <ArrowRightCircle size={25} />
+                    </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>

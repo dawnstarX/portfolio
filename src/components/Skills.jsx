@@ -34,9 +34,6 @@ const Skills = () => {
   return (
     <section className="skill" id="skills">
       <Container>
-        <br />
-        <br />
-        <br />
         <Row>
           <Col>
             <div className="skill-bx">
