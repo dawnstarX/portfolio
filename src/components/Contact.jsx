@@ -1,43 +1,32 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 
 const Contact = () => {
-  const fromInitialDetails = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  };
-
-  const [formDetails, setFormDetails] = useState(fromInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
+  const firstRef = useRef(null);
+  const lastRef = useRef(null);
+  const emailRef = useRef(null);
+  const phoneRef = useRef(null);
+  const messageRef = useRef(null);
 
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value,
-    });
+  let timeout1;
+  let timeout2;
+
+  const func = () => {
+    setButtonText("sent successfully");
+  };
+  const f = () => {
+    setButtonText("send");
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setButtonText("Sending..");
-    let resposne = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "Application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = resposne.json();
-    setFormDetails(fromInitialDetails);
-
-    setStatus({ success: true, message: "Message sent successfully ." });
+    timeout1 = setTimeout(func, 1000);
+    e.target.reset();
+    timeout2 = setTimeout(f, 1500);
   };
 
   return (
@@ -52,59 +41,27 @@ const Contact = () => {
             <form onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6} className="px-1">
-                  <input
-                    type="text"
-                    value={formDetails.firstName}
-                    placeholder="First Name"
-                    onChange={(e) => onFormUpdate("firstName", e.target.value)}
-                  />
+                  <input type="text" ref={firstRef} placeholder="First Name" />
                 </Col>
                 <Col sm={6} className="px-1">
-                  <input
-                    type="text"
-                    value={formDetails.lastName}
-                    placeholder="Last Name"
-                    onChange={(e) => onFormUpdate("lastName", e.target.value)}
-                  />
+                  <input type="text" ref={lastRef} placeholder="Last Name" />
                 </Col>
                 <Col sm={6} className="px-1">
                   <input
                     type="email"
-                    value={formDetails.email}
+                    ref={emailRef}
                     placeholder="Email Address"
-                    onChange={(e) => onFormUpdate("email", e.target.value)}
                   />
                 </Col>
                 <Col sm={6} className="px-1">
-                  <input
-                    type="tel"
-                    value={formDetails.phone}
-                    placeholder="Phone No"
-                    onChange={(e) => onFormUpdate("phone", e.target.value)}
-                  />
+                  <input type="tel" ref={phoneRef} placeholder="Phone No" />
                 </Col>
                 <Col>
-                  <textarea
-                    row="6"
-                    value={formDetails.message}
-                    placeholder="Message"
-                    onChange={(e) => onFormUpdate("message", e.target.value)}
-                  />
+                  <textarea row="6" ref={messageRef} placeholder="Message" />
                   <button type="submit">
                     <span>{buttonText}</span>
                   </button>
                 </Col>
-                {status.message && (
-                  <Col>
-                    <p
-                      className={
-                        status.success === false ? "danger" : "success"
-                      }
-                    >
-                      {status.message}
-                    </p>
-                  </Col>
-                )}
               </Row>
             </form>
           </Col>
