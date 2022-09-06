@@ -11,9 +11,6 @@ const Contact = () => {
   const phoneRef = useRef(null);
   const messageRef = useRef(null);
 
-  let timeout1;
-  let timeout2;
-
   const func = () => {
     setButtonText("sent successfully");
   };
@@ -24,9 +21,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setButtonText("Sending..");
-    timeout1 = setTimeout(func, 1000);
+    setTimeout(func, 1000);
     e.target.reset();
-    timeout2 = setTimeout(f, 1500);
+    setTimeout(f, 1500);
   };
 
   return (
