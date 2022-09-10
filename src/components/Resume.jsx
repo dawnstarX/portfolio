@@ -32,7 +32,9 @@ const Resume = () => {
                         isVisible ? "animate__animated animate__flash" : ""
                       }
                     >
-                      <button>Download</button>
+                      <a href="https://drive.google.com/file/d/1cWwR_pePVidHPdFE7-nx02ck5IJFA5bv/view?usp=sharing">
+                        <button>Download</button>
+                      </a>
                     </div>
                   )}
                 </TrackVisibility>
