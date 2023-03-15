@@ -7,6 +7,8 @@ import projImg3 from "../assets/img/project3.png";
 import projImg4 from "../assets/img/project4.png";
 import projImg5 from "../assets/img/project5.png";
 import projImg6 from "../assets/img/project6.png";
+import projImg7 from "../assets/img/project7.png";
+import projImg8 from "../assets/img/project8.png";
 
 import colourSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -15,19 +17,25 @@ import TrackVisibility from "react-on-screen";
 const Project = () => {
   const projects = [
     {
+      title: "Repositoriez",
+      description:
+        "A web app where you can create,update,delete,search and filter your GitHub repositories",
+      imgUrl: projImg7,
+      projectLink: "https://repository-viewer.vercel.app/",
+    },
+    {
+      title: "Street-Fighter",
+      description: "A 2D fighiting game with all required game mechanics",
+      imgUrl: projImg8,
+      projectLink:
+        "https://631b471a477ee4009678f7b6--grand-cuchufli-a7a6df.netlify.app/",
+    },
+    {
       title: "Food-wayz",
       description:
         "A full reciepe website made with the help of spoonacular's API",
       imgUrl: projImg1,
       projectLink: "https://dawnstarx.github.io/food-wayz/",
-    },
-    {
-      title: "Travel Mate",
-      description:
-        "Landing Page of a Travelling Website",
-      imgUrl: projImg2,
-      projectLink:
-        "https://62f53f4b69249b00095a21b1--rainbow-kashata-90e055.netlify.app/",
     },
     {
       title: "JIIT Taste",
@@ -36,13 +44,7 @@ const Project = () => {
       imgUrl: projImg3,
       projectLink: "https://jiit-taste.herokuapp.com/",
     },
-    {
-      title: "Accordion",
-      description: "The QNA section of a webpage",
-      imgUrl: projImg4,
-      projectLink:
-        "https://62eff09639e46339bbd58c13--teal-nasturtium-4a07ac.netlify.app/",
-    },
+
     {
       title: "Menu",
       description: "Menu page for a food odering or a fast food chain website",
