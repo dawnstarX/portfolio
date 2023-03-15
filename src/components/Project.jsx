@@ -24,7 +24,7 @@ const Project = () => {
     {
       title: "Travel Mate",
       description:
-        "Landing Pages for different sections of a Traveling website",
+        "changes applied",
       imgUrl: projImg2,
       projectLink:
         "https://62f53f4b69249b00095a21b1--rainbow-kashata-90e055.netlify.app/",
